@@ -9,7 +9,7 @@ function Box(){
         <h3>{inputemail}</h3> */}
         </div>
         </div>
-<div className='w-52 bg-black rounded-lg flex mb-4'><img src={github} className='p-2'></img> <p className='text-white text-start pl-1 pt-4 pb-4'>Github</p> <img src={arrow} className='pl-24 '></img></div>
+<div className='sm:w-52 w-36 sm:ml-2 ml-2 bg-black rounded-lg flex mb-4'><img src={github} className='p-2'></img> <p className='text-white text-start pl-1 pt-4 pb-4'>Github</p> <img src={arrow} className='pl-24 '></img></div>
 </>
     );
 }
