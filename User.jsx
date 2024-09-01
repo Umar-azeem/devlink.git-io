@@ -8,13 +8,13 @@ function User() {
 
   return (
     <>
-      <div className="flex  mt-8 ">
-        <div className="w-2/4 h-auto bg-white m-2">
+      <div className="flex mt-2 sm:mt-8 ">
+        <div className="sm:w-2/4 w-24 h-auto bg-white m-4 sm:m-2">
           <div className="">
             <img
               src={state}
              
-              className="rounded-full w-28 ml-12 h-28 flex text-center items-center justify-center bg-zinc-100"
+              className="rounded-full w-20  ml-4 sm:ml-12 h-20  sm:w-28 sm:h-28 flex text-center items-center justify-center bg-zinc-100"
             />
           </div>
           {/* {list.map((item, index) => ( */}
@@ -24,7 +24,7 @@ function User() {
     {list.inputFirst} {list.inputSecond}
   </h1>
 ) : (
-  <div className="w-52 h-4 mt-4 bg-zinc-100 rounded-lg"></div>
+  <div className=" w-32 sm:w-52 h-4 mt-4 bg-zinc-100 rounded-lg"></div>
 )}
            {list.inputEmail ?  ( <h3 className="text-sm mt-1 text-gray-500 text-start">
                 {list.inputEmail}
