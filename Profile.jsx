@@ -17,7 +17,6 @@ function Profiles() {
       const imageUrl = URL.createObjectURL(file);
       setImageURL(imageUrl);
       setState(imageUrl);
-  
     }
   };
 
@@ -27,22 +26,26 @@ function Profiles() {
 
   return (
     <>
-      <div className="w-2/4 h-auto bg-white m-4">
+      <div className=" h-auto bg-white m-4">
         <div className="flex flex-col justify-center">
-          <h1 className="text-4xl m-8 font-bold">Profile Details</h1>
-          <p className="text-gray-500 ml-8 text-lg">
+          <h1 className="sm:text-4xl text-2xl m-3 sm:m-8 font-bold">
+            Profile Details
+          </h1>
+          <p className="text-gray-500 ml-3 sm:ml-8 text-[10px] sm:text-lg">
             Add your details to create a personal touch to your profile.
           </p>
         </div>
-        <div className="w-[90%] h-auto rounded-lg bg-gray-50 m-2 flex flex-col justify-center">
-          <div className="w-full h-auto flex justify-center"></div>
-          <div className="flex">
+        <div className=" h-auto rounded-lg bg-gray-50 m-2 flex flex-col justify-center">
+          <div className="sm:w-full w-80 h-auto flex justify-center"></div>
+          <div className="flex w-80 h-32 sm:w-full sm:h-auto  ">
             <div className="flex items-center justify-center">
-              <h1 className="text-center text-lg m-4">Profile picture</h1>
+              <h1 className="text-center text-[10px] sm:text-lg m-4">
+                Profile picture
+              </h1>
             </div>
             <div
               onClick={handleImageClick}
-              className="bg-violet-100 text-indigo-500 text-lg font-medium rounded-md m-4 w-44 h-44 border-[1px] flex justify-center flex-col"
+              className="bg-violet-100 text-indigo-500 text-[10px] sm:text-lg font-medium rounded-md m-4 w-44 h-44 border-[1px] flex justify-center flex-col"
             >
               <input
                 type="file"
@@ -58,28 +61,28 @@ function Profiles() {
                   className="w-full h-full object-cover rounded-md"
                 />
               ) : (
-                <div>
+                <div className="flex flex-col justify-center sm:mb-0 mb-12">
                   <img
                     src={image}
-                    width={40}
-                    height={40}
+                    width={30}
+                    height={30}
                     alt=""
-                    className="ml-16 text-lg"
+                    className="sm:ml-16  ml-10 text-[10px] sm:text-lg"
                   />
-                  <p className="text-center font-semibold">+ Upload Image</p>
+                  <p className="text-center  font-semibold">+ Upload Image</p>
                 </div>
               )}
               <div className="flex items-center justify-center"></div>
             </div>
-            <p className="text-sm mt-20">
+            <p className="sm:text-sm text-[10px] mt-10 sm:mt-20">
               Image must be below 1024x1024px.
               <br /> Use PNG or JPG format.
             </p>
           </div>
-          <div className="w-[90%] m-12 h-auto rounded-lg bg-gray-50 flex flex-col justify-center">
+          <div className=" h-auto rounded-lg bg-gray-50 flex flex-col justify-center">
             <div className="flex justify-center m-2 flex-col">
               <div className="flex mt-4">
-                <p className="text-center flex justify-start items-center">
+                <p className="text-center text-[10px] w-20 sm:text-base  flex justify-start items-center">
                   First name*
                 </p>
                 <input
@@ -89,11 +92,11 @@ function Profiles() {
                   }}
                   type="text"
                   placeholder=" e.g Umar"
-                  className="text-indigo-500 border-gray-300 text-md rounded-md w-96 ml-16 h-12 border-[1px] hover:border-red-500"
+                  className="text-indigo-500 border-gray-300 sm:text-lg text-[10px] rounded-md sm:w-96 w-60 ml-4 sm:ml-16 sm:h-12 h-8 border-[1px] hover:border-red-500"
                 />
               </div>
               <div className="flex mt-4">
-                <p className="text-center flex justify-center items-center">
+                <p className="text-center w-20 flex text-[10px] sm:text-base justify-start items-center">
                   Last name*
                 </p>
                 <input
@@ -103,11 +106,11 @@ function Profiles() {
                   }}
                   type="text"
                   placeholder=" e.g Azeem"
-                  className="text-indigo-500 border-gray-300 text-md rounded-md w-96 ml-16 h-12 border-[1px] hover:border-red-500"
+                  className="text-indigo-500 border-gray-300 sm:text-lg text-[10px] rounded-md sm:w-96 w-60 ml-4 sm:ml-16 sm:h-12 h-8 border-[1px] hover:border-red-500"
                 />
               </div>
               <div className="flex mt-4">
-                <p className="text-center flex justify-center items-center">
+                <p className="text-center w-20 flex text-[10px] sm:text-base justify-start items-center">
                   Email
                 </p>
                 <input
@@ -117,7 +120,7 @@ function Profiles() {
                   }}
                   type="text"
                   placeholder=" e.g email@example.com"
-                  className="text-indigo-500 text-md rounded-md w-96 ml-[104px] h-12 border-[1px] border-gray-300 hover:shadow-lg hover:border-indigo-500"
+                  className="text-indigo-500 border-gray-300 sm:text-lg text-[10px] rounded-md sm:w-96 w-60 ml-4 sm:ml-16 sm:h-12 h-8 border-[1px] hover:border-red-500"
                 />
               </div>
             </div>
@@ -138,7 +141,7 @@ function Profiles() {
                   setInputEmail("");
                   setImageURL("");
                 }}
-                className="text-white bg-violet-700 text-lg font-medium rounded-md w-28 h-12 border-[1px] border-indigo-500 hover:border-indigo-100 hover:bg-violet-300"
+                className="text-white bg-violet-700 text-sm  sm:text-lg font-medium rounded-md w-14 h-8 sm:w-28 sm:h-12 border-[1px] border-indigo-500 hover:border-indigo-100 hover:bg-violet-300"
               >
                 Save
               </button>
